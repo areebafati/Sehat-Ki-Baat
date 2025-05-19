@@ -1,0 +1,77 @@
+.why-choose {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .why-choose h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .why-choose h2 span {
+    color: #007bff;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+  
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .service-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1 1 300px;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    box-shadow: 0 6px 16px rgba(22, 19, 19, 1.5);
+    transition: 2ms;
+    cursor: pointer;
+    transform: scale(1.02);
+
+  }
+  
+  .icon-wrapper {
+    background-color: #007bff;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-wrapper img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .service-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .service-card p {
+    color: #666;
+    font-size: 14px;
+  }
+  
