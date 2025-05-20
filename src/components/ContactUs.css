@@ -1,92 +1,133 @@
 .contact-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-shadow: 1px 1px #ccc;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover,
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 8px #007bff;
+  outline: none;
+}
+
+.contact-form button {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.4s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to right, #0056b3, #009ec3);
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.map-container iframe {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-  
-  .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  /* Contact Form */
-  .contact-form {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
-  
-  .contact-form button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Info & Map */
-  .contact-info {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* Cards */
-  .contact-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .card {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    justify-content: flex-start;
-  }
-  
-  /* Map */
-  .map-container iframe {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-  }
-  /* .success-message {
-    margin-top: 10px;
-    color: green;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-     */
+}

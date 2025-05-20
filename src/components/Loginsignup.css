@@ -1,5 +1,5 @@
 /* auth.css */
-body {
+/* body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #cfd4da;
     margin: 0;
@@ -15,7 +15,7 @@ body {
     background: #fff;
     border-radius: 12px;
     box-shadow: 7px 7px  #213146;
-    /* box-shadow: 0 10px 25px rgba(8, 8, 8, 0.1) solid; */
+    /* box-shadow: 0 10px 25px rgba(8, 8, 8, 0.1) solid;
     text-align: center;
   }
   
@@ -75,4 +75,113 @@ body {
   .auth-container a:hover {
     text-decoration: underline;
   }
-  
+   */ 
+
+   /* Loginsignup.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('https://t3.ftcdn.net/jpg/02/92/90/56/240_F_292905667_yFUJNJPngYeRNlrRL4hApHWxuYyRY4kN.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  backdrop-filter: blur(4px);
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.login-card h2 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.login-card p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-wrapper .icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #323538;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.login-card input::placeholder {
+  color: #ccc;
+}
+
+.login-card input:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 5px #007bff;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-card button:hover {
+  background-color: #17314d;
+  transform: scale(1.02);
+  transition: 1ms;
+}
+
+.login-card a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

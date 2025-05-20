@@ -34,6 +34,7 @@ const Services = () => {
     transition={{ duration: 0.6 }}
   >
     <section  id="howitworkssection"className="how-it-works">
+  
     <h2>
             How it <span> Works</span>
 

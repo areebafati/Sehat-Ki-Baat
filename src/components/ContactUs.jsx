@@ -1,28 +1,15 @@
 // import React from "react";
 import "./ContactUs.css";
-import React, { useState } from "react";
+import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-
-
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaCommentDots } from "react-icons/fa";
 
 const ContactUs = () => {
- 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    toast.success("✅ Your message has been submitted successfully!", {
-      position: "bottom-right",
-      autoClose: 3000,        // Close after 3 seconds
-      hideProgressBar: false, // Show progress bar
-      closeOnClick: true,     // Close when clicked
-      pauseOnHover: true,     // Pause when hovered
-      draggable: true,        // Allow dragging
-      progress: undefined,    // Default progress behavior
-      theme: "colored",       // Or "light", "dark"
-    });
-    e.target.reset(); // Optional: reset form
+    toast.success("✅ Your message has been submitted successfully!");
+    e.target.reset();
   };
 
   return (
@@ -30,38 +17,27 @@ const ContactUs = () => {
       <h2>Contact Us</h2>
 
       <div className="contact-container">
-        {/* Contact Form */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form glass" onSubmit={handleSubmit}>
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
           <textarea rows="5" placeholder="Your Message" required></textarea>
           <button type="submit">Send Message</button>
-          <ToastContainer position="bottom-right" autoClose={3000} />
-
-               {/* Success Message */}
-            
-  
-
-
-
+          <ToastContainer position="bottom-right" autoClose={3000} theme="colored" />
         </form>
 
-   
-
-        {/* Contact Info & Map */}
-        <div className="contact-info">
+        <div className="contact-info glass">
           <div className="contact-cards">
             <div className="card">
-              📍 <span>Location: G8/4 Islamabad, Pakistan</span>
+              <FaMapMarkerAlt /> <span>G8/4 Islamabad, Pakistan</span>
             </div>
             <div className="card">
-              📞 <span>Phone no.:+92 343 9024736</span>
+              <FaPhone /> <span>+92 343 9024736</span>
             </div>
             <div className="card">
-              ✉️ <span>Gmail: info@sehatkebaat.com</span>
+              <FaEnvelope /> <span>info@sehatkebaat.com</span>
             </div>
             <div className="card">
-              💬 <span>Personal: +92 311 8203633</span>
+              <FaCommentDots /> <span>+92 311 8203633</span>
             </div>
           </div>
 

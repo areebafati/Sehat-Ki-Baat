@@ -1,13 +1,13 @@
 // components/Signup.jsx
+// Signup.jsx
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Loginsignup.css'; 
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {  Link } from 'react-router-dom';
-
+import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
 
 const Signup = () => {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', password: '' });
@@ -27,33 +27,44 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password);
       await updateProfile(userCredential.user, {
         displayName: `${form.firstName} ${form.lastName}`,
-        
       });
-      toast.success("🎉 Account created successfully!");
-    
 
+      toast.success("🎉 Account created successfully!");
       setTimeout(() => {
         navigate('/home');
-      }, 1500); // Wait 1.5 seconds
+      }, 1500);
     } catch (error) {
       toast.error(error.message);
     }
   };
 
   return (
-    <div className="auth-container">
-      <h2>Sign up Here!</h2>
-      <br />
-      <form onSubmit={handleSignup}>
-        <input name="firstName" type="text" placeholder="First Name" required onChange={handleChange} />
-        <input name="lastName" type="text" placeholder="Last Name" required onChange={handleChange} />
-        <input name="email" type="email" placeholder="Email" required onChange={handleChange} />
-        <input name="password" type="password" placeholder="Password (min 6 chars)" required onChange={handleChange} />
-        <button type="submit">Signup</button>
-        <p>Back To Login? <Link to="/login">Click Here</Link></p>
-        <ToastContainer position="bottom-right" autoClose={3000} theme="colored" />
-
-      </form>
+    <div className="login-page">
+      <div className="login-card">
+        <h2>Create Account</h2>
+        <p>Sign up to get started</p>
+        <form onSubmit={handleSignup}>
+          <div className="input-wrapper">
+            <FaUser className="icon" />
+            <input name="firstName" type="text" placeholder="First Name" required onChange={handleChange} />
+          </div>
+          <div className="input-wrapper">
+            <FaUser className="icon" />
+            <input name="lastName" type="text" placeholder="Last Name" required onChange={handleChange} />
+          </div>
+          <div className="input-wrapper">
+            <FaEnvelope className="icon" />
+            <input name="email" type="email" placeholder="Email" required onChange={handleChange} />
+          </div>
+          <div className="input-wrapper">
+            <FaLock className="icon" />
+            <input name="password" type="password" placeholder="Password (min 6 chars)" required onChange={handleChange} />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <Link to="/login">Login here</Link></p>
+      </div>
+      <ToastContainer position="bottom-right" autoClose={3000} theme="colored" />
     </div>
   );
 };
