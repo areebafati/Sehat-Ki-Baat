@@ -24,16 +24,25 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <motion.div
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-  >
-    <section id="testimonialsection" className="testimonial-section">
+    <motion.section
+      id="testimonialsection"
+      className="testimonial-section"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <h2>What Pakistanis Say</h2>
       <div className="testimonial-container">
         {testimonials.map((t, index) => (
-          <div key={index} className="testimonial-card">
+          <motion.div
+            key={index}
+            className="testimonial-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
             <p className="testimonial-text">“{t.review}”</p>
             <div className="testimonial-footer">
               <img src={t.image} alt={t.name} className="testimonial-avatar" />
@@ -42,11 +51,10 @@ export default function TestimonialSection() {
                 <p className="testimonial-city">{t.city}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
-  </motion.div>
-   
+    </motion.section>
   );
 }
+
