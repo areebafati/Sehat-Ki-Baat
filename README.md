@@ -1,12 +1,12 @@
-# React + Vite
+# SehatKeBaat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ I built a fully functional React + Vite website featuring:
 
-Currently, two official plugins are available:
+✅ Login & Signup Pages with Firebase Authentication
+✅ Smooth Animations for better user experience
+✅ Interactive Icons & UI Enhancements
+✅ Dynamic Maps Integration
+✅ Clean, responsive design using modern tools and best practices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project helped me sharpen my skills in:
+🛠 React.js | Firebase | CSS Animations | UX/UI Design
