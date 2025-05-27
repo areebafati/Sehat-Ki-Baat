@@ -66,11 +66,3 @@
 }
 
 /* Optional: fine-tune for very small screens */
-@media (max-width: 400px) {
-  .btn {
-    flex: 1 1 100%; /* Stack vertically if screen too narrow */
-  }
-  .btn:hover{
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-}
