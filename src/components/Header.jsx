@@ -7,6 +7,7 @@ import './Header.css';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <motion.header
@@ -22,18 +23,18 @@ function Header() {
       </div>
 
       <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-        <Link className="nav-link" to="/home" state={{ scrollTo: "herosection" }}>Home</Link>
-        <Link to="/home" state={{ scrollTo: "featuressection" }}>Features</Link>
-        <Link to="/home" state={{ scrollTo: "servicessss" }}>Services</Link>
-        <Link to="/home" state={{ scrollTo: "howitworkssection" }}>How It Works</Link>
-        <Link to="/home" state={{ scrollTo: "testimonialsection" }}>Testimonials</Link>
-        <Link to="/contact">Contact Us</Link>
+        <Link className="nav-link" to="/home" state={{ scrollTo: "herosection" }} onClick={closeMenu}>Home</Link>
+        <Link to="/home" state={{ scrollTo: "featuressection" }} onClick={closeMenu}>Features</Link>
+        <Link to="/home" state={{ scrollTo: "servicessss" }} onClick={closeMenu}>Services</Link>
+        <Link to="/home" state={{ scrollTo: "howitworkssection" }} onClick={closeMenu}>How It Works</Link>
+        <Link to="/home" state={{ scrollTo: "testimonialsection" }} onClick={closeMenu}>Testimonials</Link>
+        <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
 
         <div className="auth-buttons">
-          <Link to="/login">
+          <Link to="/login" onClick={closeMenu}>
             <button className="login-btn">Login</button>
           </Link>
-          <Link to="/signup">
+          <Link to="/signup" onClick={closeMenu}>
             <button className="signup-btn">Sign Up</button>
           </Link>
         </div>

@@ -64,4 +64,27 @@
   .rating {
     color: #fbbf24; /* golden star color */
   }
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  
+ 
+  
+    .card-footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .card:hover {
+      box-shadow: 0 6px 16px rgba(22, 19, 19, 1.5);
+      transition: 2ms;
+      cursor: pointer;
+      transform: scale(1.02);
+  
+    
+    }
+  }
   

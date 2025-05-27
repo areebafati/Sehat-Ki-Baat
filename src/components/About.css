@@ -18,20 +18,23 @@
   
   .services-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;         /* Prevent wrap on desktop */
     justify-content: center;
     gap: 12px;
   }
   
   .btn {
-    padding: 10px 20px;
-    border-radius: 9999px;
+    padding: 6px 12px;         /* Enough space for comfortable clicking */
+    border-radius: 90px;
     background-color: #f0f0f0;
     color: #333;
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    font-size: 1rem;
+    white-space: nowrap;       /* Prevent button text from wrapping */
   }
+  
   
   .btn:hover {
     background-color:#007bff;
@@ -45,5 +48,31 @@
   
   .btn-primary:hover {
     background-color: #0069d9;
+  }
+  @media (max-width: 768px) {
+    .services-container {
+      padding: 50px 15px;
+    }
+  
+    .services-title {
+      font-size: 1.6rem;
+    }
+  
+    .services-subtitle {
+      font-size: 0.95rem;
+    }
+    .btn:hover {
+      background-color:#007bff;
+      color: white;
+    }
+  
+    .services-buttons {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+ 
+  
   }
   

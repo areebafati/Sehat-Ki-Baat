@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.main-header {
+/* .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,19 @@
     top: 0;
     z-index: 1000;
      
+  } */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Reduce padding on smaller screens */
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
   }
+  
 
 
   
@@ -83,15 +95,26 @@
   .signup-btn:hover {
     background-color: #005fcc;
   }
+  /* .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 15px;
+   
+  } */
   .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 26px;
   }
+  
   .hamburger .line {
     width: 25px;
     height: 3px;
-    background: black;
+    background: rgb(30, 29, 109);
     margin: 3px 0;
   }
   
@@ -104,48 +127,37 @@
       background: white;
       flex-direction: column;
       width: 100%;
-      padding: 20px;
+      padding: 20px 16px;
       display: none;
       gap: 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      animation: slideDown 0.3s ease-in-out;
     }
   
     .nav-menu.active {
       display: flex;
     }
   
+    .auth-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
     .hamburger {
       display: flex;
-    }
-  }
 
-  .glass {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
     }
   }
   
-  @keyframes slideUp {
+  @keyframes slideDown {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(-10px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-
   

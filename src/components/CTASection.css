@@ -1,60 +1,76 @@
-
 .cta-section {
-    background: linear-gradient(to right, #0099ff, #00c6ff);
-    color: rgb(243, 239, 239);
-    padding: 60px 20px rgb(95, 177, 231);
-    text-align: center;
-    border-radius: 15px;
-    margin: 40px 20px;
-  }
-  
-  .cta-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-  
-  .cta-section p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
+  background: linear-gradient(to right, #0099ff, #00c6ff);
+  color: rgb(243, 239, 239);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 40px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  flex: 1 1 calc(50% - 16px); /* 2 buttons in one row including gap */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Filled button */
+.btn-filled {
+  background-color: white;
+  color: #007bff;
+  border: none;
+}
+
+.btn-filled:hover,
+.btn-filled:active {
+  background-color: #e6e6e6;
+  color: black;
+}
+
+/* Outlined button */
+.btn-outlined {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outlined:hover,
+.btn-outlined:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Optional: fine-tune for very small screens */
+@media (max-width: 400px) {
   .btn {
-    padding: 12px 24px;
-    border-radius: 999px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    flex: 1 1 100%; /* Stack vertically if screen too narrow */
   }
-  
-  .btn-filled {
-    background-color: white;
-    color: #007bff;
-    border: none;
-  }
-  
-  .btn-filled:hover {
-    background-color: #e6e6e6;
-    color: black;
-  }
-  
-  .btn-outlined {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-  }
-  
-  .btn-outlined:hover {
+  .btn:hover{
     background-color: rgba(255, 255, 255, 0.15);
   }
-  
+}
